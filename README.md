@@ -35,4 +35,4 @@ We can use [Github Pages](https://pages.github.com) to host it as a website, so 
 
 ### You Can Search Its Content Through Github API and Slack
 
-Since this project is hosted on Github, we can use [Github Search API](https://developer.github.com/v3/search/) to search for keywords in documents. To make things even better, we can hook this API to Bots (e.g. Hubot) and then our team member could search Wiki contents directly on Slack.
+Since this project is hosted on Github, we can use [Github Search API](https://developer.github.com/v3/search/) to search for keywords in documents. To make things even better, we can hook this API to Bots (e.g. Hubot) so that we can search Wiki contents from Slack.
