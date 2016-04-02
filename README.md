@@ -36,3 +36,8 @@ We can use [Github Pages](https://pages.github.com) to host it as a website, so 
 ### You Can Search Its Content Through Github API and Slack
 
 Since this project is hosted on Github, we can use [Github Search API](https://developer.github.com/v3/search/) to search for keywords in documents. To make things even better, we can hook this API to Bots (e.g. Hubot) so that we can search Wiki contents from Slack.
+
+
+### You Can Edit It On Github Or On Prose.io
+
+Now it's linked with [Prose.io](prose.io). Compared to Github, Prose.io has a better editing interface so you guys can write wiki directly in [your browser](http://prose.io/#weflex/wiki).
