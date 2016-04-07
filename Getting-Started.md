@@ -12,14 +12,15 @@ Node.js is the major technology we use to build our apps. It might not be perfec
 
 Here's a list of technology stack we have been using so far (and still using):
 
-- _Javascript_ is the most common programming language;
+- _JavaScript_ is the most common programming language;
 - _React_ is our most-used client rendering library;
 - _Loopback_ is server framework;
-- _MongoDB_ for persist data storage;
+- _MongoDB_ for persistent data storage;
+- _Redis_ for message queue and session store;
 - _Docker_ containers as service runtime;
-- Other *nix tools such as Make, BASH, etc;
 - _Markdown_ for normal documentation;
 - _Org_ for structural documents that for human to read and for machine to execute;
+- Other *nix tools such as Make, BASH, etc;
 
 
 Some Important Private Projects
@@ -27,12 +28,22 @@ Some Important Private Projects
 
 - [weflex/gateway](https://github.com/weflex/gateway)
 
-Gateway is our server program. This server provides data and transactional services in JSON format.
+Gateway is our server program, and it does proxy the following backend micro services:
+
+- RESTFul Requests;
+- middleware requests which contain:
+  - transactional script or command queue based on JSON;
+  - views(offline documents) requests;
 
 Plain CRUD (Create, Read, Update and Destroy) operations on models are implemented in RESTful style and model schematics defined under `common/models/`.
 
-Beside RESTful APIs, there's also transactional APIs that handles complex transactions such as notification, payment and passcode authentication. These APIs are called middlewares are declared under `server/middleware.json`.
+Beside RESTful APIs, there's also transactional APIs that handles complex transactions such as payment and passcode authentication. 
+These APIs are called middlewares are declared under `server/middleware.json`.
 
+- [weflex/resque-workers](https://github.com/weflex/resque-workers)
+
+We build notifications, offline documents and other micro-services based on the powerful and flexible distributed message queue Resque.
+For more details, see [README](https://github.com/weflex/resque-workers/blob/master/README.md).
 
 - [weflex/gian](https://github.com/weflex/gian)
 
