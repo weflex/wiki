@@ -2,7 +2,7 @@ App上线检查清单(checklist)
 ====
 
 - Umeng数据统计
-- ~~ 内部数据打点（pageview验证）~~
+- ~~内部数据打点（pageview验证）~~
 - release note
  
 
