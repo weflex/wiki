@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Internal Shared Knowledge Database for WeFlex",
   "main": "README.md",
-  "scripts": {},
+  "scripts": {
+    "build": "make all"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weflex/wiki.git"
@@ -19,7 +21,8 @@
   },
   "homepage": "https://github.com/weflex/wiki#readme",
   "dependencies": {
-    "@weflex/weflex": "2.1.0"
+    "@weflex/gian": "~1.22.1",
+    "@weflex/weflex": "~2.1.0"
   },
   "devDependencies": {}
 }
