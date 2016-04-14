@@ -1,0 +1,25 @@
+{
+  "name": "@weflex/wiki",
+  "version": "0.1.0",
+  "description": "Internal Shared Knowledge Database for WeFlex",
+  "main": "README.md",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weflex/wiki.git"
+  },
+  "keywords": [
+    "WeFlex",
+    "Wiki",
+    "Documentation"
+  ],
+  "author": "Scott Wang",
+  "bugs": {
+    "url": "https://github.com/weflex/wiki/issues"
+  },
+  "homepage": "https://github.com/weflex/wiki#readme",
+  "dependencies": {
+    "@weflex/weflex": "2.1.0"
+  },
+  "devDependencies": {}
+}
