@@ -53,3 +53,43 @@ setup environment variables (see spawn script for more options and details)
 start container
 
     spawn <your-project> <build-id>
+
+
+Setup Nginx
+----
+
+    vi /etc/nginx/nginx.conf
+
+set nginx up to work as a proxy
+
+    ... // other nginx configurations
+    
+    http {
+      ... // other setups and servers
+      
+      server {
+        listen       80; // or other port user can access
+        location     / {
+          proxy_pass http://127.0.0.1:<service-port>;
+        }
+      }
+    }
+
+or you can use it as a static file server
+
+    ... // other nginx configurations
+    
+    http {
+      ... // other setups and servers
+      
+      server {
+        listen       80; // or other port user can access
+        location     / {
+          root <your-static-file-root-directory>
+        }
+      }
+    }
+
+then restart the server
+
+    nginx -s reload
