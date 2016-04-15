@@ -92,4 +92,5 @@ or you can use it as a static file server
 
 then restart the server
 
+    nginx -t
     nginx -s reload
