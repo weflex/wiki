@@ -1,6 +1,6 @@
 {
   "name": "@weflex/wiki",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Internal Shared Knowledge Database for WeFlex",
   "main": "README.md",
   "scripts": {
