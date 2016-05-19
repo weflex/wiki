@@ -55,3 +55,12 @@ This deprecates SMSBao.
 | username                 | password   |
 | ------------------------ | ---------- |
 | scott.wang@theweflex.com | Evan0j1kan |
+
+
+## ZhugeIO 诸葛io
+
+[诸葛io](http://zhugeio.com) 是一个用户行为分析平台。
+
+| username                 | password   |
+| ------------------------ | ---------- |
+| scott.wang@theweflex.com | Evan0j1kan |
