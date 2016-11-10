@@ -16,6 +16,9 @@ docker rmi `docker images | grep <none>`
 
 # remove dead images
 docker rmi `docker images -aq`
+
+# remove exited containers
+docker rm -v $(docker ps -aq -f status=exited)
 ```
 
 Result after solution: disk usages shrinked from 20GB (out of 20GB) to 7GB (70% reduced).
