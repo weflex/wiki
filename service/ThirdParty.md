@@ -55,3 +55,12 @@ This deprecates SMSBao.
 | username                 | password   |
 | ------------------------ | ---------- |
 | scott.wang@theweflex.com | Evan0j1kan |
+
+
+## WeChat Open Platform (微信开放平台)
+
+注：微信开放平台和微信公众平台是独立的两个平台，账号不能互通并且不能用同一邮箱注册。
+
+| username             | password   |
+| -------------------- | ---------- |
+| wechat@theweflex.com | Evan0j1kan |
