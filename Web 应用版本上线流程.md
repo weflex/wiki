@@ -1,4 +1,4 @@
-# Web 应用版本上线规范
+# Web 应用版本上线流程
 
 1. 检查 *master* 是否和 *origin/master* 平齐；
 
@@ -25,3 +25,9 @@
 	docker tag gateway:<version> docker.theweflex.com/gateway:<version>
 	docker push docker.theweflex.com/gateway:<version>
 	ssh root@api.getweflex.com 'spawn gateway <version>'
+
+如果有数据库迁移脚本需要运行，
+
+	scp -r migration root@api.getweflex.com:/opt/
+	ssh root@api.getweflex.com
+	(on remote): mongo $MONGO_URI /opt/migration/<script file>
