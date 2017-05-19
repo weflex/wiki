@@ -1,0 +1,113 @@
+# 使用 Docker 部署服务端应用
+
+> Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux and Windows Server apps.
+> — [What is Docker](https://www.docker.com/what-docker)
+
+关于如何开始使用，请阅读  [Getting Started with Docker](https://docs.docker.com/get-started/) 文档。
+
+**为何使用 Docker 部署？**
+1. 保证服务运行环境的独立；
+2. 统一生产、测试和开发环境；
+3. 简化运维部署流程；
+4. 方便进行版本控制；
+
+**Docker 的劣势？**
+1. 拉取过的镜像会留存在本地，会逐渐占满磁盘空间；
+2. OverlayFS 会占用过多的 iNode；
+
+## 在 CentOS 上安装并启动 Docker CE
+
+参考 [Docker CE for CentOS](https://store.docker.com/editions/community/docker-ce-server-centos?tab=description)。安装命令如下
+
+	# Preparation works
+	sudo yum install -y yum-utils
+	sudo yum-config-manager \
+	   --add-repo \
+	   https://download.docker.com/linux/centos/docker-ce.repo
+	sudo yum makecache fast
+	
+	# Remove docker packages shipped with CentOS (if any)
+	sudo yum -y erase docker docker-client docker-selinux docker-common
+	
+	# Install Docker CE
+	sudo yum install -y docker-ce
+	
+	# Start Docker
+	sudo systemctl start docker
+
+## 在 macOS Sierra 上安装并启动 Docker CE
+
+参考 [Docker CE for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac?tab=description)。下载并安装 [Docker.dmg](https://download.docker.com/mac/stable/Docker.dmg)，然后从 LaunchPad 启动 *Docker.app* 即可。
+
+## Docker 服务器运维常用命令
+
+> 有关命令行参数的标记请参照 [Unix 命令行参数标记语法](#)
+
+0. 查看帮助文档
+		docker [<subcommand>] --help
+
+1. 查看当前 Docker 进程
+		docker ps
+
+2. 启动 Docker 进程
+		docker run [<options>] [<registry>/]<image>[:<tag>] [<command>] [<args> ...]
+	常用 options
+	- `-d`
+		将 Docker 作为[服务 (daemon) ](https://en.wikipedia.org/wiki/Daemon_(computing))启动
+	- `--name <name>`
+		赋予容器一个唯一的名字。默认会添加一个随机生成的名字
+	- `-p <vm_port>[:<host_port>]`
+		将容器的 `vm_port` 绑定到 host 的 `host_port` 上
+	- `-e <env_name>=<env_value>`
+		设置容器的环境变量
+	- `--restart {no|always|failure}`
+		容器是否自动重启
+	- `-v <vm_volume>[:<host_volume>]`
+	- `--link <peer_container>`
+
+	完整的选项请参见 [docker run 官方文档](https://docs.docker.com/engine/reference/commandline/run/) 或 `docker run --help`
+
+3. 结束 Docker 进程
+		docker kill {<name>|<id>}
+
+4. 清除已退出 container
+		docker rm `docker ps -aq`
+
+5. 查看 log
+		docker log {<name>|<id>}
+
+## 目前使用 Docker 部署的应用
+
+- gateway
+	[gateway](https://github.com/weflex/gateway/) 是目前产品的资源服务器。可以使用 [spawn.sh](https://github.com/weflex/weflex/blob/master/bin/scripts/spawn) 来启动 gateway:
+		spawn gateway <version>
+
+- resque-workers
+	[resque-workers](https://github.com/weflex/resque-workers)是和 gateway 配套的一个 workers 进程处理器。目前 resque-workers 主要提供短信发送功能。resque-workers 也可以使用 spawn.sh 来启动
+		spawn resque-workers <version>
+
+- mongodb[^1]
+	[mongodb](https://store.docker.com/images/mongo)数据库可以使用 docker run 命令来启动
+		docker run -d \
+		 --restart always \
+		 --name mongo \
+		 -p 27017 \
+		 mongo:latest
+
+- redis
+	[redis](https://store.docker.com/images/redis)可以使用 docker run命令启动
+		docker run -d \
+		 --restart always \
+		  --name redis \
+		  -p 6379 \
+		  redis:alpine
+
+- registry
+	[registry](https://hub.docker.com/_/registry/)是存储 Docker images 的内部服务。目前 registry 部署在 [docker.theweflex.com](docker.theweflex.com) 域名下，在测试服务器上。
+		docker run -d \
+		 --restart always \
+		 --name registry \
+		  -p 5000 \
+		  registry
+
+[^1]:	生产环境下，为了优化性能，mongo 和 redis 部署在独立的服务器上
