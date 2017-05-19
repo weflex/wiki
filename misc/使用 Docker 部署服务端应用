@@ -44,16 +44,20 @@
 > 有关命令行参数的标记请参照 [Unix 命令行参数标记语法](#)
 
 0. 查看帮助文档
+
 		docker [<subcommand>] --help
 
 1. 查看当前 Docker 进程
+
 		docker ps
 
 2. 启动 Docker 进程
+
 		docker run [<options>] [<registry>/]<image>[:<tag>] [<command>] [<args> ...]
-	常用 options
-	- `-d`
-		将 Docker 作为[服务 (daemon) ](https://en.wikipedia.org/wiki/Daemon_(computing))启动
+
+常用 options
+- `-d`
+	将 Docker 作为[服务 (daemon) ](https://en.wikipedia.org/wiki/Daemon_(computing))启动
 	- `--name <name>`
 		赋予容器一个唯一的名字。默认会添加一个随机生成的名字
 	- `-p <vm_port>[:<host_port>]`
@@ -68,26 +72,32 @@
 	完整的选项请参见 [docker run 官方文档](https://docs.docker.com/engine/reference/commandline/run/) 或 `docker run --help`
 
 3. 结束 Docker 进程
+
 		docker kill {<name>|<id>}
 
 4. 清除已退出 container
+
 		docker rm `docker ps -aq`
 
 5. 查看 log
+
 		docker log {<name>|<id>}
 
 ## 目前使用 Docker 部署的应用
 
 - gateway
 	[gateway](https://github.com/weflex/gateway/) 是目前产品的资源服务器。可以使用 [spawn.sh](https://github.com/weflex/weflex/blob/master/bin/scripts/spawn) 来启动 gateway:
+
 		spawn gateway <version>
 
 - resque-workers
 	[resque-workers](https://github.com/weflex/resque-workers)是和 gateway 配套的一个 workers 进程处理器。目前 resque-workers 主要提供短信发送功能。resque-workers 也可以使用 spawn.sh 来启动
+
 		spawn resque-workers <version>
 
 - mongodb[^1]
 	[mongodb](https://store.docker.com/images/mongo)数据库可以使用 docker run 命令来启动
+
 		docker run -d \
 		 --restart always \
 		 --name mongo \
@@ -96,6 +106,7 @@
 
 - redis
 	[redis](https://store.docker.com/images/redis)可以使用 docker run命令启动
+
 		docker run -d \
 		 --restart always \
 		  --name redis \
@@ -104,6 +115,7 @@
 
 - registry
 	[registry](https://hub.docker.com/_/registry/)是存储 Docker images 的内部服务。目前 registry 部署在 [docker.theweflex.com](docker.theweflex.com) 域名下，在测试服务器上。
+
 		docker run -d \
 		 --restart always \
 		 --name registry \
