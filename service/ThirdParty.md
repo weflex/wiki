@@ -22,9 +22,9 @@ We have been_QingCloud_ to host our Virtual Private Servers (VPS) for a while. A
 4. Studio Landing Page and npm registry running at `119.254.98.195, and`
 5. VPN service running at `209.9.106.89`.
 
-| username                 | password   |
-| ------------------------ | ---------- |
-| scott.wang@theweflex.com | Evan0j1kan |
+| username                 | password             |
+| ------------------------ | -------------------- |
+| technology@theweflex.com | LhvL43XAyp4jXW49h7mk |
 
 
 ## Qiniu (七牛)
@@ -36,7 +36,7 @@ _Qiniu_ is a Cloud File Storage and Distribution service. At this moment, we hav
 
 | username                 | password   |
 | ------------------------ | ---------- |
-| scott.wang@theweflex.com | Evan0j1kan |
+| technology@theweflex.com | Evan0j1kan |
 
 
 ## SMSBao (短信宝)
@@ -54,4 +54,4 @@ This deprecates SMSBao.
 
 | username                 | password   |
 | ------------------------ | ---------- |
-| scott.wang@theweflex.com | Evan0j1kan |
+| technology@theweflex.com | Evan0j1kan |
