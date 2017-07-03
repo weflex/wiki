@@ -61,5 +61,7 @@ Before you leave and proceed to other part of this wiki, to checkout our Expert 
 | Yorkie Liu   | @yorkie     | Node.js, Loopback, Redis, React, Github              |
 | Dai Xi       | @Xidai      | WeFlex Product, AngularJS, Loopback                  |
 | Fancy Pan    | @omohiko    | WeFlex Product, Prototyping, Information Architecture|
+| chentaoyu    | @chentaoyu  | WeFlex Front, nodejs, server                         |
+| ruoru        | @ruoru      | WeFlex Front, React. shen zi jian mo, ru yun piao bo.|
 
 So if you hit any problem while reading this wiki or doing your work, feel free to ask the right person questions on Github or on Slack.
