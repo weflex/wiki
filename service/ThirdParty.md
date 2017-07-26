@@ -52,6 +52,16 @@ Short Message Service (SMS) we are using.
 
 This deprecates SMSBao.
 
+| username                 | password   | descript     |
+| ------------------------ | ---------- | ------------ |
+| technology@theweflex.com | Evan0j1kan |              |
+| sjl0312@gmail.com        | WeFlex123  | 工作室图片库 |
+
+## Mixpanel
+
+track user operation
+
 | username                 | password   |
 | ------------------------ | ---------- |
-| technology@theweflex.com | Evan0j1kan |
+| technology@theweflex.com | weflex2014 |
+
