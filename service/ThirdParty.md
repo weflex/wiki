@@ -43,9 +43,26 @@ _Qiniu_ is a Cloud File Storage and Distribution service. At this moment, we hav
 
 Short Message Service (SMS) we are using.
 
-| username  | password   |
-| ----------| ---------- |
-| weflex    | Evan0j1kan |
+| username | password   |
+| -------- | ---------- |
+| weflex   | Evan0j1kan |
+
+
+## Ali (阿里)
+Domain name management.
+https://account.aliyun.com/login/login.htm
+| username    | password             |
+| ----------- | -------------------- |
+| weflex2014  | iFoVbhz4jLvQsYBFKoVm |
+
+
+
+## 网易
+SMS provider.
+https://id.163yun.com/login
+| username                 | password         |
+| ------------------------ | ---------------- |
+| technology@theweflex.com | KoVm0j1kanvQsYBF |
 
 
 ## YunTongXun (容联·云通讯)
