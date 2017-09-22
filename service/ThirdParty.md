@@ -72,3 +72,9 @@ This deprecates SMSBao.
 | username                 | password   |
 | ------------------------ | ---------- |
 | technology@theweflex.com | Evan0j1kan |
+
+## 腾讯云
+| username                 | password            |
+| technology@theweflex.com | EazUkJUy7DrQsGAMsPe}|
+
+## 
