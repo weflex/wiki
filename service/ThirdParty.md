@@ -79,4 +79,9 @@ This deprecates SMSBao.
 | ------------------------ | ---------------------|
 | technology@theweflex.com | EazUkJUy7DrQsGAMsPe} |
 
-## 
+## GymSmart 开放平台
+http://open.gymsmart.cn/api/#/index
+心率数据
+| username   | password         |
+| ---------- | ---------------- |
+| weflex     | KoVm0j1kanvQsYBF |
