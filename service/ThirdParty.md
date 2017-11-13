@@ -80,8 +80,8 @@ This deprecates SMSBao.
 | technology@theweflex.com | EazUkJUy7DrQsGAMsPe} |
 
 ## GymSmart 开放平台
-http://open.gymsmart.cn/api/#/index
-心率数据
-| username   | password         |
-| ---------- | ---------------- |
-| weflex     | KoVm0j1kanvQsYBF |
+[官网地址](http://open.gymsmart.cn/api/#/index)
+
+| username   | password     | descript  |
+| ---------- | ------------ | --------- |
+| weflex     | L3f6DU4NXHV7 | 心率数据    |
